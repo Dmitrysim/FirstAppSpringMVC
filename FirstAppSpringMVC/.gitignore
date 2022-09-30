@@ -1,0 +1,11 @@
+# IntelliJ project files
+.idea
+*.iml
+out
+gen### macOS template
+# General
+.DS_Store
+.AppleDouble
+.LSOverride
+/.idea/
+target
