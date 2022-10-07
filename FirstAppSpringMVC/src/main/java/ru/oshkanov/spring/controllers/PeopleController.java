@@ -1,8 +1,6 @@
 package ru.oshkanov.spring.controllers;
 
-import com.sun.org.apache.xpath.internal.operations.Mod;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -11,6 +9,7 @@ import ru.oshkanov.spring.dao.PersonDAO;
 import ru.oshkanov.spring.models.Person;
 
 import javax.validation.Valid;
+import java.sql.SQLException;
 
 @Controller
 @RequestMapping("/people")
@@ -24,7 +23,7 @@ public class PeopleController {
     }
 
     @GetMapping()
-    public String index(Model model) {
+    public String index(Model model) throws SQLException {
         model.addAttribute("people", personDAO.index());
         return "people/index";
     }
