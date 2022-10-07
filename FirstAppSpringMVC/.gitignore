@@ -9,3 +9,4 @@ gen### macOS template
 .LSOverride
 /.idea/
 target
+/src/main/resources/database.properties
